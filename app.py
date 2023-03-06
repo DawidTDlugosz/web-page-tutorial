@@ -5,7 +5,7 @@
 #
 # ***********************************************
 
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route("/")  # when URL "/" is accesed run what is below
 def hello_world():
-    return "Hello, flask"
+    return render_template('home.html')
 
 
 # make a flask running
